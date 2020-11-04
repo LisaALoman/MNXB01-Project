@@ -29,27 +29,34 @@ void tempTrender::tempPerDay() {
 
     // Here we can start plotting the average temperature for each day (For uppsala we already have this)
     
-    //for hotcold, Make a histogram of the hottest and coldest day of the year
+    //for hotcold, Make a histogram of the hottest and coldest day of the year for uppsala
     
     void tempTrender::hotCold() { 
      ifstream file("filePath"); //open input file 
      
-     if( "some statement to be checked for content of file" )
-       std::cout << "Error: the file content did not match the expected" << std::endl;
+     // Test to see if we find Uppsala in the filepath.
+    std::string uppsala = "uppsala";
+    if (pFilePath.find(uppsala) == std::string::npos) {
+        std::cout << "We didn't find Uppsala in the given filepath" << std::endl;
      Int_t n = 0; //counter initialized
      string helpString; //help variable
      
      while(getline(file, helpString)) n++; ) nEntries = n;//to get number of entries in dataset
      
-      //Notes: "pick out" correct data from file
-      //Use for maximum? Int_t binmax = hist->GetMaximumBin(); Double_t x = hist->GetXaxis()->GetBinCenter(binmax) 
-      //How do we get what binnumber this corresponds to?
-      //How to do for data from uppsala AND lund data file at the same time? do separately and "draw" in same histogram?
-      //Set start year somehow. 
+      //Notes: "pick out" correct data from file, hottest/ coldest day of each year
+      //Find minimum/maximum each year? Int_t binmax = hist->GetMaximumBin(); Double_t x = hist->GetXaxis()->GetBinCenter(binmax) 
+      //How do we get what binnumber this corresponds to? year month day
+      //
+      // 
       cout << "Year" << year << "Month :" << month << "Date : " << date <<  endl;
       nEntries++;
   
+      TH1D histhotCold = new TH1D("histhotCold", "Histogram", 365, -50, 50); //not sure if I have written this correctly 
+      ??->??("histhotCold", "x", "y"); //read in data and set the right parameters?
+      histhotCold->GetMean();
+      histhotCold->GetStdDev();
       
+      histhotCold->Draw();
   
  }
 }

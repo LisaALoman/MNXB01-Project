@@ -3,6 +3,7 @@
 
 #include <string>
 
+
 class tempTrender {
 	public:
         tempTrender(std::string filePath); //Construct using the specified file
@@ -19,10 +20,17 @@ class tempTrender {
 
 	private:
         std::string pFilePath;
-	Int_t year;
-    Int_t month;
-    Int_t date;
-    Double_t temp;
+        
+    
+    std::string helpString;
+    
+    Int_t Year;
+    Int_t Month;
+    Int_t Date;
+    Double_t Temp;
+    Int_t ID;
+    Int_t counter;
+    Int_t firstYear; //year month day (ID) of the hottest/coldest day each year
 };
 
 #endif
