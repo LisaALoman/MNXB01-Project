@@ -8,7 +8,7 @@ Authors: *Lisa Andersson Loman, Justinas Smertinas, Sara Wildenor, Theodor Blom.
 
 **HOW TO RUN:** <br />
 
-*'Battle for Valborg' and 'the Highs and Lows of Uppsala':*
+*'Battle for Valborg':*
 
     - Launch ROOT (version 6.22) from inside the ./code/ directory.
     - >root [0] project()
@@ -18,4 +18,9 @@ Authors: *Lisa Andersson Loman, Justinas Smertinas, Sara Wildenor, Theodor Blom.
     - # Execute a bash script to run both our datahandling script and R script.
     - chmod +x run_take_me_to_the_moon.sh
     - ./run_take_me_to_the_moon.sh
+    
+*'the Highs and Lows of Uppsala':*
+
+    - Launch ROOT in Iridium (ROOT version 6.14/04) from inside the ./HotCold/ directory.
+    - >root [0] project()
 
